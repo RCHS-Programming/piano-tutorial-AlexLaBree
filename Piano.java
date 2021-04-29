@@ -8,10 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
  */
 public class Piano extends World
 {
-    private String[] whitekeys = 
+   private String[] whiteKeys = 
        {"a","s","d","f","g","h","j","k","i",";","'","\\"};
-    private String[] whiteNotes = 
+   private String[] whiteNotes = 
        {"3c","3d","3e","3f","3g","3a","3b","4c","4d","4e","4f","4g"};
+   private String[] blackNotes=
+       {"W","E","","T","Y","U","","O","P","","]"};
+   private String[]blackNotes=
+       {"3c#","3d#","","3f#","3g#","3a#","","4c#","4d#","","4f#"};
     /**
      * Make the piano.
      */
@@ -21,9 +25,9 @@ public class Piano extends World
         
         int i;
         
-        for (i=0;i<whitekeys.length; i++)
+        for (i=0;i<whiteKeys.length; i++)
         {
-            Key key=new Key(whiteKeys[i], whiteNotes[i]+".wav");
+            Key key=new Key (whiteKeys[i], whiteNotes[i]+".wav","white-key.png","white-key-down.png"););
             addObject(key,54 + i*63, 140);
       }
    }
